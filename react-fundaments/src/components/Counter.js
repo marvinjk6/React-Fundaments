@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
    
-// rcp -  create an class component with extension ES7 + Rect/Redux
+// rce -  create an class component with extension ES7 + Rect/Redux
 // rconst - create the constructor
 export default class Counter extends Component {
 
