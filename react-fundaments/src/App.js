@@ -1,12 +1,14 @@
 import './App.css';
 
-import Counter from './components/Counter';
+import DestructuringFunctional from './components/DestructuringFunctional';
+import DestructuringClass from './components/DestructuringClass';
 
 
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
+        <DestructuringFunctional name="Ichigo" sword="Zangetsu"/>
+        <DestructuringClass name="Naruto" ninjaLevel="Hokage" />
     </div>
   );
 }
