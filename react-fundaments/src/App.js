@@ -1,14 +1,14 @@
 import './App.css';
+import ClassClick from './components/ClassClick';
 
-import DestructuringFunctional from './components/DestructuringFunctional';
-import DestructuringClass from './components/DestructuringClass';
+import FunctionClick from './components/FunctionClick';
 
 
 function App() {
   return (
     <div className="App">
-        <DestructuringFunctional name="Ichigo" sword="Zangetsu"/>
-        <DestructuringClass name="Naruto" ninjaLevel="Hokage" />
+       <FunctionClick />
+       <ClassClick />
     </div>
   );
 }
