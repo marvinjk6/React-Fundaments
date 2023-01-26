@@ -1,24 +1,19 @@
 import React from 'react';
 
-// first way
+/********** PROPS with Functional components **********/
 
-/*
-function Greet() {
-
-     return(
-         <h1>Hello world</h1>
+const Greet = (props) => {
+    
+    // here we use props.name with curly braces, the curly braces is a feature of JSX which is really helpfull and used a lot in React applications
+    console.log(props)
+    return (
+        <div>
+            <h3>Name: {props.name}</h3> 
+            <h4>Hero name: {props.heroName}</h4>
+            {props.children}
+        </div>
     )
 }
-export default Greet
-*/
-
-// second way
-/*
-const Greet = () => <h1>Hello World</h1>
 
 export default Greet;
-*/
 
-
-// third way
-export const Greet = () => <h1>Hello Marvin</h1>
