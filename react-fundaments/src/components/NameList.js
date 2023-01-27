@@ -22,13 +22,19 @@
  * Why we need key props? the keys help react identify which items in a list have changed or added or removed, and place a crucial role in handling UI, when it has a key react compare the items in the list and render the list making the necessaries changes , without a key react render all the list again it is less efficient.
  */
 
+/**
+ * How to use index as a key, and the problems when used in wrong scenarios
+ * 
+ * when we use an array with values that aren't objects, whe don't have an id to pass as a key prop, in this case its possible to use INDEX, index is the second parameter of the function of the map method 
+ */
+
 import React from 'react'
 import Person from './Person'
 
 export default function NameList() {
 
-    //const names = ['Alphonse', 'Luffy', 'Light', 'Goku']
-    //const nameList = names.map(name => <h3>{name}</h3>)
+    const names = ['Alphonse', 'Luffy', 'Light', 'Goku']
+    const nameList = names.map((name, index) => <h2 key={index}>{name}</h2>)
 
     const persons = [
         {
@@ -64,10 +70,10 @@ export default function NameList() {
     
     return (
         <div>
-            <h1>Person List</h1>
+            <h1>Name List</h1>
             {/*nameList*/}
             {/** names.map(name => <h3>{name}</h3>) */}
-            {personList}
+            {nameList}
         </div>
     )
 }
