@@ -10,6 +10,18 @@
  * 
  */
 
+
+/**
+ * Lists an Keys
+ * Each list using the map method shoukd have a unique 'key' prop
+ * Add a key prop in the person component in the map method function which contains <Person key={person.id} /> 
+ * 
+ * the key propertie doens't always need to be an id it can be a name for example
+ * the key props is not accecible in the child component, react needs the key prop to render the list efficiently, if we need a vqleu to be used in the child component we have to pass it as a different prop. Key prop is reserved
+ * 
+ * Why we need key props? the keys help react identify which items in a list have changed or added or removed, and place a crucial role in handling UI, when it has a key react compare the items in the list and render the list making the necessaries changes , without a key react render all the list again it is less efficient.
+ */
+
 import React from 'react'
 import Person from './Person'
 
@@ -48,7 +60,7 @@ export default function NameList() {
 
     //Namelist is only responsible for render the personList
 
-    const personList = persons.map(person => <Person person={person} />)
+    const personList = persons.map(person => <Person key={person.id} person={person} />)
     
     return (
         <div>
