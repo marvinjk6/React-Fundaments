@@ -1,5 +1,5 @@
 
-/** See the images 
+/** See the images - Component Mounting Lifecycle Methods
  * 1- Constructor(props): 
  *  used: Initializing state, binding event handlers
  *  
@@ -22,7 +22,6 @@ import LifecycleB from './LifecycleB'
 
 export default class LifecycleA extends Component {
 
-  //First
   constructor(props) {
     super(props)
   
@@ -32,24 +31,47 @@ export default class LifecycleA extends Component {
     console.log('LifecycleA constructor(props)')
   } 
 
-  //Second
+  // first update lifecycle method
   static getDerivedStateFromProps(props, state) {
     console.log('LifecycleA getDerivedStateFromProps')
     return null
   }
 
-  //Fourth
   componentDidMount() {
     console.log('LifecycleA componentDidMount')
 
   }
 
-  //Third
+  // second update lifecycle method
+  shouldComponentUpdate() {
+    console.log('LifecycleA shouldComponentUpdate')
+    return true
+  }
+
+  //fourth update lifecycle method
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('LifecycleA getSnapshotBeforeUpdate')
+    return null
+  }
+
+  //fifth update lifecycle method
+  componentDidUpdate() {
+    console.log('LifecycleA componentDidUpdate')   
+  }
+
+  changeState = () => {
+    this.setState({
+        name: 'Shinigami'
+    })
+  }
+  
+  // third update lifecycle method
   render() {
     console.log('LifecycleA render()')
     return (
       <div>
-        LifecycleA
+        <div>{this.state.name}</div>
+        <button onClick={this.changeState}>change state</button>
         <LifecycleB />
       </div>
       

@@ -1,9 +1,16 @@
 
+/**
+ * Updating Lifecycle Methods
+ * 
+ * render and componentDidUpdate are the more commonly used method od the updating lifecycle methods
+ * 
+ */
+
 import React, { Component } from 'react'
 
 export default class LifecycleB extends Component {
 
-  //First
+  
   constructor(props) {
     super(props)
   
@@ -13,19 +20,36 @@ export default class LifecycleB extends Component {
     console.log('LifecycleB constructor')
   } 
 
-  //Second
+  // first update lifecycle method
   static getDerivedStateFromProps(props, state) {
     console.log('LifecycleB getDerivedStateFromProps')
     return null
   }
 
-  //Fourth
   componentDidMount() {
     console.log('LifecycleB componentDidMount')
 
   }
 
-  //Third
+  // second update lifecycle method
+  shouldComponentUpdate() {
+    console.log('LifecycleB shouldComponentUpdate')
+    return true
+  }
+
+  //fourth update lifecycle method
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('LifecycleB getSnapshotBeforeUpdate')
+    return null
+  }
+
+  //fifth update lifecycle method
+  componentDidUpdate() {
+    console.log('LifecycleB componentDidUpdate')   
+  }
+
+
+  //third update lifecycle method
   render() {
     console.log('LifecycleB render')
     return (
