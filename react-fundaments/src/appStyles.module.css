@@ -1,0 +1,5 @@
+/*** css modules has .module.css sufix, the advantage is that the styles only exists locally, this avoids conflicts with the styles of other components, the class error can be used for every child of App out of the App.js component, but styles.sucess can be used only in the App.js scope **/
+
+.success {
+   color: green; 
+}
