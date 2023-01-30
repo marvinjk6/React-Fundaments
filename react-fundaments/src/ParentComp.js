@@ -2,8 +2,6 @@
 
 import React, { Component } from 'react'
 import MemoComp from './components/MemoComp'
-import PureComp from './components/PureComp'
-import RegComp from './components/RegComp'
 
 export default class ParentComp extends Component {
 
