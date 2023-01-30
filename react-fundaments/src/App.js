@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
-import FRParent from './components/FRParent'
-
+import PortalDemo from './components/PortalDemo'
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <FRParent />
+        <PortalDemo />
       </div>
     )
   }
