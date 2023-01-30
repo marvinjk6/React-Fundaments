@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const UpdatedComponent = (OriginalComponent) => {
+const UpdatedComponent = (OriginalComponent, incrementNumber) => {
     class NewComponent extends React.Component {
         constructor(props) {
           super(props)
@@ -14,16 +14,19 @@ const UpdatedComponent = (OriginalComponent) => {
 
         incrementCount() {
             this.setState(prevState =>{
-                return { count: prevState.count + 1 }
+                return { count: prevState.count + incrementNumber }
             })
         }
 
-        // pass the method and the state using this
+        // the sword comes from App.js
+        // when passing we need to use the spread operator
         render() {
+            console.log(this.props.sword)
+
             return <OriginalComponent
-            name="Marvin"
             count={this.state.count}
             incrementCount={this.incrementCount}
+            {...this.props}
             />
         }
     }

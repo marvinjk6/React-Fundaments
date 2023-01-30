@@ -21,10 +21,11 @@ class ClickCounter extends Component {
 
     //const { count } = this.state
     //this way 
-    const {name, count , incrementCount} = this.props
-    return <button onClick={incrementCount}>{name} Clicked {count} times</button>
+    const { count , incrementCount} = this.props
+    return <button onClick={incrementCount}>{this.props.sword} Clicked {count} times</button>
   }
 }
 
 // while exporting the UpdatedComponent passing in ClickCounter component 
-export default UpdatedComponent(ClickCounter)
+// here we pass the number we want to increment
+export default UpdatedComponent(ClickCounter, 5)
