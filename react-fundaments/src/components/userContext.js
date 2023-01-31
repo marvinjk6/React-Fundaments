@@ -2,12 +2,14 @@
 
 import React from 'react'
 
-//1º step create the context, a context created with React createContext method comes with a PROVIDER and a CONSUMER React Component
-const UserContext = React.createContext()
+
+//Default Value: we can set a default value to the context, pass as a parameter on the createContext method, to see this value comment the UserProvider on App.js
+const UserContext = React.createContext('defult value')
 
 const UserProvider = UserContext.Provider
 const UserConsumer = UserContext.Consumer
 
-// export Provider and Consumer components
 export { UserProvider, UserConsumer }
 
+//export UseContext
+export default UserContext
