@@ -43,7 +43,7 @@
 
 .hover {
   width: 200px;
-  background-color: #282c34;
+  background-color: rgb(255, 153, 0);
   color: white;
   padding: 12px;
   border-radius: 10px;
